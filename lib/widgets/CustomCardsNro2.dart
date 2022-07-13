@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 
 class CustomCardsNro2 extends StatelessWidget {
-  const CustomCardsNro2({Key? key}) : super(key: key);
+  final String ImageUrl;
+  final String descript;
+  const CustomCardsNro2(
+      {super.key, required this.ImageUrl, required this.descript});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 5,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Column(
         children: [
           FadeInImage(
-              image: NetworkImage(
-                  'https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2016/10/579423-vw-scirocco-r-wolfsburg-adios-como-merece.jpg?itok=jZbt9e1p'),
-              placeholder: AssetImage(
-                  'C:\Users\nahue\Documents\GitHub\OptionMenu-example-Flutter\assets\Car Dynamic picture,running red car gif _.gif'),
-              width: double.infinity,
-              height: 260,
-              fit: BoxFit.cover)
+            image: NetworkImage(ImageUrl),
+            placeholder: AssetImage('loading-cargando.gif'),
+            width: double.infinity,
+            height: 260,
+            fit: BoxFit.cover,
+            fadeInDuration: Duration(seconds: 10),
+          ),
+          Container(
+              padding: EdgeInsets.only(top: 10, bottom: 10),
+              child: Text(descript))
         ],
       ),
     );

@@ -18,7 +18,20 @@ class CardScreen extends StatelessWidget {
           ),
           children: [
             CustomCardsNro1(),
-            CustomCardsNro2(),
+            CustomCardsNro2(
+                ImageUrl:
+                    'https://p4.wallpaperbetter.com/wallpaper/367/111/813/volkswagen-scirocco-car-tuning-wallpaper-preview.jpg',
+                descript: 'awesome Car'),
+            CustomCardsNro2(
+              ImageUrl:
+                  'https://p4.wallpaperbetter.com/wallpaper/81/859/733/tuning-volkswagen-volkswagen-scirocco-wallpaper-preview.jpg',
+              descript: 'Best Car',
+            ),
+            CustomCardsNro2(
+              ImageUrl:
+                  'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+              descript: 'Sport Car ',
+            )
           ],
         ));
   }
