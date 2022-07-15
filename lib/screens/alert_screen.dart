@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/theme/app_theme.dart';
 
 class AlertScreen extends StatelessWidget {
   const AlertScreen({super.key});
@@ -6,13 +7,21 @@ class AlertScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'AlertScreen',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('AlertScreen'),
+        body: Center(
+          child: ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Show me the alert')),
         ),
-        body: const Center(
-          child: Text('AlertScreen'),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.home),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
     );
