@@ -12,7 +12,7 @@ class AvatarScreen extends StatelessWidget {
         actions: [
           Container(
             margin: const EdgeInsets.only(right: 15),
-            child: const CircleAvatar(child: const Text('NV'),),
+            child: const CircleAvatar(backgroundImage: NetworkImage('https://images.unsplash.com/photo-1617703174946-6895edf8866f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'),),
           )
 
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter_application_1/models/models.dart';
+import 'package:flutter_application_1/screens/animated_screen.dart';
 
 import 'package:flutter_application_1/screens/screens.dart';
 
@@ -41,6 +42,12 @@ class AppRoutes {
       iconData: Icons.person_sharp,
       name: 'Avatar',
       screen: const AvatarScreen(),
+    ),
+    MenuOption(
+      route: 'animated',
+      iconData: Icons.play_circle_outline_sharp,
+      name: 'Animated',
+      screen: const AnimatedScreen(),
     ),
   ];
 
