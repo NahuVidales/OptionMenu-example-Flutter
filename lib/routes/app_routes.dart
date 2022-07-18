@@ -36,6 +36,12 @@ class AppRoutes {
       name: 'Cards',
       screen: const CardScreen(),
     ),
+    MenuOption(
+      route: 'avatar',
+      iconData: Icons.person_sharp,
+      name: 'Avatar',
+      screen: const AvatarScreen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
