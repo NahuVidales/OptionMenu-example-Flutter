@@ -30,7 +30,9 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-         child: Container(
+         child: AnimatedContainer(
+          duration: const Duration(seconds: 1),
+          curve: Curves.easeOutExpo,
           height: heightP,
           width: widthP,
           
