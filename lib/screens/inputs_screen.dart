@@ -12,12 +12,16 @@ class InputsScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
          child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
           child: Column(
             children: [
               TextFormField(
                 textCapitalization: TextCapitalization.words,
                 autofocus: true,
+                initialValue: 'Start in',
+                onChanged: (value) {
+                  print('value $value');
+                },
               )
             ],
           ),)
