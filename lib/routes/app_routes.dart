@@ -49,6 +49,12 @@ class AppRoutes {
       name: 'Animated',
       screen: const AnimatedScreen(),
     ),
+    MenuOption(
+      route: 'inputs',
+      iconData: Icons.input_rounded,
+      name: 'InputsScreen',
+      screen: InputsScreen(),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

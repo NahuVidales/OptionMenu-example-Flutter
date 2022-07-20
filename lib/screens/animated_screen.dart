@@ -39,7 +39,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
           decoration: BoxDecoration(borderRadius: borderP, color: colorP,),
          ),
       ),
-      floatingActionButton: FloatingActionButton(child: Icon(Icons.airplanemode_on_outlined) , onPressed:ChangeForm,),
+      floatingActionButton: FloatingActionButton(onPressed:ChangeForm,child: Icon(Icons.airplanemode_on_outlined) ,),
       );
     
   }
