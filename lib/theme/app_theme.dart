@@ -19,5 +19,13 @@ class AppTheme {
         elevation: 0,
       ),
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
+        )
+      ))
   );
 }
