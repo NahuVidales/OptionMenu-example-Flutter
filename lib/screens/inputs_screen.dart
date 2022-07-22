@@ -8,6 +8,19 @@ class InputsScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
+  
+    final GlobalKey <FormState> myFormKey = GlobalKey<FormState>();
+
+
+    final Map <String, String> formValues= {
+      'User'      : 'Nahu',
+      'Real Name' : 'Nahuel',
+      'Email'     : 'nv@yopmail.com',
+      'Password'  : '123456',
+    };
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Text Input'),
@@ -15,10 +28,36 @@ class InputsScreen extends StatelessWidget {
       body: SingleChildScrollView(
          child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-          child: Column(
-            children: [
-              InputCustomsText(helperText: 'Insert username', hintText: 'Username', labelText: 'Name',)
-            ],
+          child: Form(
+            key: myFormKey,
+            child: Column(
+              children: [
+                InputCustomsText(helperText: 'Insert username', hintText: 'Username', labelText: 'Name',),
+                SizedBox(height: 30,),
+                
+                InputCustomsText(helperText: 'insert Real Name', hintText: 'Real Name', labelText: 'Real Name',),
+                SizedBox(height: 30,),
+          
+                InputCustomsText(helperText: 'Insert Email', hintText: 'Email Adress', labelText: 'Email', keyboardType: TextInputType.emailAddress),
+                SizedBox(height: 30,),
+          
+                InputCustomsText(helperText: 'Insert Password', hintText: 'Password', labelText: 'Password', obscureText: true),
+                SizedBox(height: 30,),
+
+                ElevatedButton(
+                onPressed: () {
+                  FocusScope.of(context).requestFocus(FocusNode());
+                  if ( !myFormKey.currentState!.validate()){  
+                    print('Formulario no valido');
+                    return;
+                  }
+                },
+                
+                  child: SizedBox(width: double.infinity,
+                  child: Center(child: Text('Save Changes')),),
+                ),
+              ],
+            ),
           ),)
       ),
     );

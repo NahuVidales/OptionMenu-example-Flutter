@@ -7,12 +7,15 @@ class InputCustomsText extends StatelessWidget {
   final String? hintText;
   final String? labelText;
   final String? helperText;
-  
+  final TextInputType? keyboardType;
+  final bool obscureText;
   const InputCustomsText({
     Key? key,
      this.hintText,
       this.labelText,
        this.helperText,
+        this.keyboardType,
+        this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -20,6 +23,8 @@ class InputCustomsText extends StatelessWidget {
     return TextFormField(
       textCapitalization: TextCapitalization.words,
       autofocus: true,
+      keyboardType: keyboardType,
+      obscureText: obscureText,
       onChanged: (value) {
         print('value $value');
       },
