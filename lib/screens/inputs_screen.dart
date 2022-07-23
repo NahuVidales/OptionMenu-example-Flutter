@@ -32,16 +32,16 @@ class InputsScreen extends StatelessWidget {
             key: myFormKey,
             child: Column(
               children: [
-                InputCustomsText(helperText: 'Insert username', hintText: 'Username', labelText: 'Name', formProperty: 'User', formValues: {},),
+                InputCustomsText(helperText: 'Insert username', hintText: 'Username', labelText: 'Name', formProperty: 'User', formValues: formValues,),
                 SizedBox(height: 30,),
                 
-                InputCustomsText(helperText: 'insert Real Name', hintText: 'Real Name', labelText: 'Real Name', formProperty: 'Real Name', formValues: {},),
+                InputCustomsText(helperText: 'insert Real Name', hintText: 'Real Name', labelText: 'Real Name', formProperty: 'Real Name', formValues: formValues,),
                 SizedBox(height: 30,),
           
-                InputCustomsText(helperText: 'Insert Email', hintText: 'Email Adress', labelText: 'Email', keyboardType: TextInputType.emailAddress, formProperty: 'Email', formValues: {},),
+                InputCustomsText(helperText: 'Insert Email', hintText: 'Email Adress', labelText: 'Email', keyboardType: TextInputType.emailAddress, formProperty: 'Email', formValues: formValues,),
                 SizedBox(height: 30,),
           
-                InputCustomsText(helperText: 'Insert Password', hintText: 'Password', labelText: 'Password', obscureText: true, formProperty: 'Password', formValues: {},),
+                InputCustomsText(helperText: 'Insert Password', hintText: 'Password', labelText: 'Password', obscureText: true, formProperty: 'Password', formValues: formValues,),
                 SizedBox(height: 30,),
 
                 ElevatedButton(
@@ -51,6 +51,7 @@ class InputsScreen extends StatelessWidget {
                     print('Formulario no valido');
                     return;
                   }
+                  print(formValues);
                 },
                 
                   child: SizedBox(width: double.infinity,
