@@ -9,6 +9,8 @@ class InputCustomsText extends StatelessWidget {
   final String? helperText;
   final TextInputType? keyboardType;
   final bool obscureText;
+  final String formProperty;
+  final Map<String, String> formValues;
   const InputCustomsText({
     Key? key,
      this.hintText,
@@ -16,6 +18,8 @@ class InputCustomsText extends StatelessWidget {
        this.helperText,
         this.keyboardType,
         this.obscureText = false,
+         required this.formProperty,
+         required this.formValues,
   }) : super(key: key);
 
   @override
@@ -26,6 +30,7 @@ class InputCustomsText extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText,
       onChanged: (value) {
+        formValues[formProperty] = value;
         print('value $value');
       },
       validator: (value) {

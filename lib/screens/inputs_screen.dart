@@ -32,16 +32,16 @@ class InputsScreen extends StatelessWidget {
             key: myFormKey,
             child: Column(
               children: [
-                InputCustomsText(helperText: 'Insert username', hintText: 'Username', labelText: 'Name',),
+                InputCustomsText(helperText: 'Insert username', hintText: 'Username', labelText: 'Name', formProperty: 'User', formValues: {},),
                 SizedBox(height: 30,),
                 
-                InputCustomsText(helperText: 'insert Real Name', hintText: 'Real Name', labelText: 'Real Name',),
+                InputCustomsText(helperText: 'insert Real Name', hintText: 'Real Name', labelText: 'Real Name', formProperty: 'Real Name', formValues: {},),
                 SizedBox(height: 30,),
           
-                InputCustomsText(helperText: 'Insert Email', hintText: 'Email Adress', labelText: 'Email', keyboardType: TextInputType.emailAddress),
+                InputCustomsText(helperText: 'Insert Email', hintText: 'Email Adress', labelText: 'Email', keyboardType: TextInputType.emailAddress, formProperty: 'Email', formValues: {},),
                 SizedBox(height: 30,),
           
-                InputCustomsText(helperText: 'Insert Password', hintText: 'Password', labelText: 'Password', obscureText: true),
+                InputCustomsText(helperText: 'Insert Password', hintText: 'Password', labelText: 'Password', obscureText: true, formProperty: 'Password', formValues: {},),
                 SizedBox(height: 30,),
 
                 ElevatedButton(
