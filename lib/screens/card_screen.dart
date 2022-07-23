@@ -32,6 +32,26 @@ class CardScreen extends StatelessWidget {
             ImageUrl:
                 'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
             descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
           )
         ],
       ),
