@@ -18,6 +18,7 @@ class InputsScreen extends StatelessWidget {
       'Real Name' : 'Nahuel',
       'Email'     : 'nv@yopmail.com',
       'Password'  : '123456',
+      'role'      : 'Admin'
     };
 
 
@@ -43,6 +44,19 @@ class InputsScreen extends StatelessWidget {
           
                 InputCustomsText(helperText: 'Insert Password', hintText: 'Password', labelText: 'Password', obscureText: true, formProperty: 'Password', formValues: formValues,),
                 SizedBox(height: 30,),
+
+                DropdownButtonFormField<String>(
+                  value: 'Admin',
+                  items: [
+                    DropdownMenuItem(value: 'Admin', child: Text('Admin')),
+                    DropdownMenuItem(value: 'Junior', child: Text('Junior')),
+                    DropdownMenuItem(value: 'Mid', child: Text('Mid')),
+                    DropdownMenuItem(value: 'Senior', child: Text('Senior')),
+                  ],
+                  onChanged:(value) {
+                    print(value);
+                    formValues ['role'] = value ?? 'Admin';
+                  },),
 
                 ElevatedButton(
                 onPressed: () {
