@@ -40,8 +40,8 @@ class CardScreen extends StatelessWidget {
           ),
           CustomCardsNro2(
             ImageUrl:
-                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
-            descript: 'Sport Car ',
+                'https://p4.wallpaperbetter.com/wallpaper/81/859/733/tuning-volkswagen-volkswagen-scirocco-wallpaper-preview.jpg',
+            descript: 'Best Car',
           ),
           CustomCardsNro2(
             ImageUrl:
@@ -52,7 +52,53 @@ class CardScreen extends StatelessWidget {
             ImageUrl:
                 'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
             descript: 'Sport Car ',
-          )
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/81/859/733/tuning-volkswagen-volkswagen-scirocco-wallpaper-preview.jpg',
+            descript: 'Best Car',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/81/859/733/tuning-volkswagen-volkswagen-scirocco-wallpaper-preview.jpg',
+            descript: 'Best Car',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/81/859/733/tuning-volkswagen-volkswagen-scirocco-wallpaper-preview.jpg',
+            descript: 'Best Car',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+          CustomCardsNro2(
+            ImageUrl:
+                'https://p4.wallpaperbetter.com/wallpaper/118/258/516/volkswagen-scirocco-volkswagen-sirocco-hd-wallpaper-preview.jpg',
+            descript: 'Sport Car ',
+          ),
+
         ],
       ),
     );
