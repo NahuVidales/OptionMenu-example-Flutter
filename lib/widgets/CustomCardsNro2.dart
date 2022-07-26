@@ -18,7 +18,7 @@ class CustomCardsNro2 extends StatelessWidget {
         children: [
           FadeInImage(
             image: NetworkImage(ImageUrl),
-            placeholder: const AssetImage('loading-cargando.gif'),
+            placeholder: const AssetImage('assets\loading-cargando.gif'),
             width: double.infinity,
             height: 260,
             fit: BoxFit.cover,

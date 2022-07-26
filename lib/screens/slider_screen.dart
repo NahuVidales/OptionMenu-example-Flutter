@@ -30,6 +30,8 @@ class _SliderScreenState extends State<SliderScreen> {
             },),
             Image(height: valueSlider, 
             image: NetworkImage('https://www.pngplay.com/wp-content/uploads/12/Goku-Wallpaper-No-Background.png')),
+
+            SizedBox(height: 40,),
           ]
         ) ,
 
