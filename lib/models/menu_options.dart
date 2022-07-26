@@ -14,3 +14,4 @@ class MenuOption {
   final String name;
   final Widget screen;
 }
+
