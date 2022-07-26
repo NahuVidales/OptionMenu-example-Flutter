@@ -1,12 +1,13 @@
+
 import 'package:flutter/material.dart';
 
 class CustomCardsNro2 extends StatelessWidget {
   const CustomCardsNro2({
     super.key,
-    required this.ImageUrl,
+    required this.imageUrl,
     required this.descript,
   });
-  final String ImageUrl;
+  final String imageUrl;
   final String descript;
 
   @override
@@ -17,8 +18,8 @@ class CustomCardsNro2 extends StatelessWidget {
       child: Column(
         children: [
           FadeInImage(
-            image: NetworkImage(ImageUrl),
-            placeholder: const AssetImage('assets\loading-cargando.gif'),
+            image: NetworkImage(imageUrl),
+            placeholder: const AssetImage('assets/loading-cargando.gif'),
             width: double.infinity,
             height: 260,
             fit: BoxFit.cover,

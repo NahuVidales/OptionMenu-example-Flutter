@@ -1,9 +1,18 @@
-  import 'package:flutter/material.dart';
+import 'dart:developer';
 
-
-
+import 'package:flutter/material.dart';
 
 class InputCustomsText extends StatelessWidget {
+  const InputCustomsText({
+    super.key,
+    this.hintText,
+    this.labelText,
+    this.helperText,
+    this.keyboardType,
+    this.obscureText = false,
+    required this.formProperty,
+    required this.formValues,
+  });
   final String? hintText;
   final String? labelText;
   final String? helperText;
@@ -11,16 +20,6 @@ class InputCustomsText extends StatelessWidget {
   final bool obscureText;
   final String formProperty;
   final Map<String, String> formValues;
-  const InputCustomsText({
-    Key? key,
-     this.hintText,
-      this.labelText,
-       this.helperText,
-        this.keyboardType,
-        this.obscureText = false,
-         required this.formProperty,
-         required this.formValues,
-  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,25 +30,25 @@ class InputCustomsText extends StatelessWidget {
       obscureText: obscureText,
       onChanged: (value) {
         formValues[formProperty] = value;
-        print('value $value');
+        log('value $value');
       },
       validator: (value) {
         if (value == null) return 'this field is required';
-        return value.length < 3 ?  'need 3 characters at least': null ;
+        return value.length < 3 ? 'need 3 characters at least' : null;
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
         labelText: labelText,
         helperText: helperText,
-        suffixIcon: Icon(Icons.new_releases_sharp),
-        icon: Icon(Icons.account_box_sharp),
+        suffixIcon: const Icon(Icons.new_releases_sharp),
+        icon: const Icon(Icons.account_box_sharp),
 //                  border: OutlineInputBorder(
 //                    borderRadius: BorderRadius.only(
- //                     bottomLeft: Radius.circular(10), 
- //                     topRight: Radius.circular(10)
+        //                     bottomLeft: Radius.circular(10),
+        //                     topRight: Radius.circular(10)
 //                    )
-  //                ),
+        //                ),
       ),
     );
   }

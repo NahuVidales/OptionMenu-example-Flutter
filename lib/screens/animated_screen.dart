@@ -3,15 +3,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class AnimatedScreen extends StatefulWidget {
-   
-  const AnimatedScreen({Key? key}) : super(key: key);
+  const AnimatedScreen({super.key});
 
   @override
   State<AnimatedScreen> createState() => _AnimatedScreenState();
 }
 
 class _AnimatedScreenState extends State<AnimatedScreen> {
-  void ChangeForm(){
+  void changeForm(){
     widthP = Random().nextInt(200).toDouble() + 40;
     heightP = Random().nextInt(200).toDouble() + 40;
     colorP = Color.fromARGB(
@@ -39,7 +38,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
           decoration: BoxDecoration(borderRadius: borderP, color: colorP,),
          ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed:ChangeForm,child: Icon(Icons.airplanemode_on_outlined) ,),
+      floatingActionButton: FloatingActionButton(onPressed:changeForm,child: const Icon(Icons.airplanemode_on_outlined) ,),
       );
     
   }

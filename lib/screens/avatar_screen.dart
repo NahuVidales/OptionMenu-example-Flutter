@@ -20,7 +20,7 @@ class AvatarScreen extends StatelessWidget {
       body: const Center(
         
         child: CircleAvatar(backgroundImage: NetworkImage('https://codigoespagueti.com/wp-content/uploads/2022/05/goku-ultra-instinto-figura-coleccionable.jpg'),
-        maxRadius: 150),
+        maxRadius: 150,),
       ),
     );
   }

@@ -1,19 +1,17 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
-import '../widgets/widgets.dart';
+import 'package:flutter_application_1/widgets/widgets.dart';
 
 class InputsScreen extends StatelessWidget {
-   
-  const InputsScreen({Key? key}) : super(key: key);
+  const InputsScreen({super.key});
   
   @override
   Widget build(BuildContext context) {
+    final myFormKey = GlobalKey<FormState>();
 
-  
-    final GlobalKey <FormState> myFormKey = GlobalKey<FormState>();
-
-
-    final Map <String, String> formValues= {
+    final formValues= <String, String>{
       'User'      : 'Nahu',
       'Real Name' : 'Nahuel',
       'Email'     : 'nv@yopmail.com',
@@ -21,40 +19,39 @@ class InputsScreen extends StatelessWidget {
       'role'      : 'Admin'
     };
 
-
     return Scaffold(
       appBar: AppBar(
-        title: Text('Text Input'),
+        title: const Text('Text Input'),
       ),
       body: SingleChildScrollView(
          child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
           child: Form(
             key: myFormKey,
             child: Column(
               children: [
                 InputCustomsText(helperText: 'Insert username', hintText: 'Username', labelText: 'Name', formProperty: 'User', formValues: formValues,),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 
                 InputCustomsText(helperText: 'insert Real Name', hintText: 'Real Name', labelText: 'Real Name', formProperty: 'Real Name', formValues: formValues,),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
           
                 InputCustomsText(helperText: 'Insert Email', hintText: 'Email Adress', labelText: 'Email', keyboardType: TextInputType.emailAddress, formProperty: 'Email', formValues: formValues,),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
           
                 InputCustomsText(helperText: 'Insert Password', hintText: 'Password', labelText: 'Password', obscureText: true, formProperty: 'Password', formValues: formValues,),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
 
                 DropdownButtonFormField<String>(
                   value: 'Admin',
-                  items: [
-                    DropdownMenuItem(value: 'Admin', child: Text('Admin')),
+                  items: const [
+                    DropdownMenuItem(value: 'Admin',  child: Text('Admin')),
                     DropdownMenuItem(value: 'Junior', child: Text('Junior')),
-                    DropdownMenuItem(value: 'Mid', child: Text('Mid')),
+                    DropdownMenuItem(value: 'Mid',    child: Text('Mid')),
                     DropdownMenuItem(value: 'Senior', child: Text('Senior')),
                   ],
                   onChanged:(value) {
-                    print(value);
+                    log(value.toString());
                     formValues ['role'] = value ?? 'Admin';
                   },),
 
@@ -62,20 +59,19 @@ class InputsScreen extends StatelessWidget {
                 onPressed: () {
                   FocusScope.of(context).requestFocus(FocusNode());
                   if ( !myFormKey.currentState!.validate()){  
-                    print('Formulario no valido');
+                    log('Formulario no valido');
                     return;
                   }
-                  print(formValues);
+                  log(formValues.toString());
                 },
                 
-                  child: SizedBox(width: double.infinity,
+                  child: const SizedBox(width: double.infinity,
                   child: Center(child: Text('Save Changes')),),
                 ),
               ],
             ),
-          ),)
+          ),),
       ),
     );
   }
 }
-

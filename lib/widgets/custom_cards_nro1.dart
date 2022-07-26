@@ -1,11 +1,12 @@
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/theme/app_theme.dart';
 
 class CustomCardsNro1 extends StatelessWidget {
   const CustomCardsNro1({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

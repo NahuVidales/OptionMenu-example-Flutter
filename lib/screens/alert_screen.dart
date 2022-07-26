@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 class AlertScreen extends StatelessWidget {
   const AlertScreen({super.key});
   void displayDialogIOS(BuildContext context) {
-    showCupertinoDialog(
+    showCupertinoDialog<void>(
       context: context,
       builder: (context) {
         return CupertinoAlertDialog(
-          title: Text('Alert'),
+          title: const Text('Alert'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: const [
@@ -33,13 +33,13 @@ class AlertScreen extends StatelessWidget {
   }
 
   void displayDialogAndroid(BuildContext context) {
-    showDialog(
+    showDialog<void>(
       barrierDismissible: true,
       context: context,
       builder: (context) {
         return AlertDialog(
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusDirectional.circular(10)),
+              borderRadius: BorderRadiusDirectional.circular(10),),
           elevation: 5,
           title: const Text('Alert'),
           content: Column(

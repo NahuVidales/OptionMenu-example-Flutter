@@ -1,5 +1,4 @@
 import 'package:flutter_application_1/models/models.dart';
-import 'package:flutter_application_1/screens/animated_screen.dart';
 
 import 'package:flutter_application_1/screens/screens.dart';
 
@@ -53,19 +52,19 @@ class AppRoutes {
       route: 'inputs',
       iconData: Icons.input_rounded,
       name: 'InputsScreen',
-      screen: InputsScreen(),
+      screen: const InputsScreen(),
     ),
     MenuOption(
       route: 'slider',
       iconData: Icons.slideshow_rounded,
       name: 'SliderScreen',
-      screen: SliderScreen(),
+      screen: const SliderScreen(),
     ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
-    final appRoutes = <String, Widget Function(BuildContext)>{};
-    appRoutes.addAll({
+    final appRoutes = <String, Widget Function(BuildContext)>{}
+    ..addAll({
        'home' : (BuildContext context) => const HomeScreen(),
       });
     for (final option in menuOption) {
