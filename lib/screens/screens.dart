@@ -8,4 +8,5 @@ export 'package:flutter_application_1/screens/home_screen.dart';
 export 'package:flutter_application_1/screens/inputs_screen.dart';
 export 'package:flutter_application_1/screens/list_view_1.dart';
 export 'package:flutter_application_1/screens/list_view_2.dart';
+export 'package:flutter_application_1/screens/list_view_builder.dart';
 export 'package:flutter_application_1/screens/slider_screen.dart';
