@@ -2,6 +2,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/theme/app_theme.dart';
 
 class ListViewBuilderScreen extends StatefulWidget {
   const ListViewBuilderScreen({super.key});
@@ -12,7 +13,7 @@ class ListViewBuilderScreen extends StatefulWidget {
 
 class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
   final List<int> imagesId = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+ 
   final ScrollController scrollController = ScrollController();
 
   @override
@@ -37,30 +38,60 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    final size = MediaQuery.of(context).size;
+       return Scaffold(
       body: MediaQuery.removePadding(
         context: context,
         removeBottom: true,
         removeTop: true,
-        child: ListView.builder(
-          physics: BouncingScrollPhysics(),
-          controller: scrollController,
-          itemCount: imagesId.length,
-          itemBuilder: (
-            BuildContext context,
-            int index,
-          ) {
-            return FadeInImage(
-              fit: BoxFit.cover,
-              placeholder: const AssetImage('assets/loading-cargando.gif'),
-              image: NetworkImage(
-                  'https://picsum.photos/500/300?image=${imagesId[index]}',),
-              width: double.infinity,
-              height: 300,
-            );
-          },
+        child: Stack(
+          children: [
+            ListView.builder(
+              physics: const BouncingScrollPhysics(),
+              controller: scrollController,
+              itemCount: imagesId.length,
+              itemBuilder: (
+                BuildContext context,
+                int index,
+              ) {
+                return FadeInImage(
+                  fit: BoxFit.cover,
+                  placeholder: const AssetImage('assets/loading-cargando.gif'),
+                  image: NetworkImage(
+                      'https://picsum.photos/500/300?image=${imagesId[index]}',),
+                  width: double.infinity,
+                  height: 300,
+                );
+              },
+            ),
+            Positioned(
+            bottom: 40,
+            left: size.width * 0.5 - 30 ,
+            child: LoadingIcon(),
+              
+            )
+              
+          ],
         ),
       ),
     );
+  }
+}
+
+class LoadingIcon extends StatelessWidget {
+  const LoadingIcon({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 60,
+      width: 60,
+      decoration: const BoxDecoration(
+      color: Colors.white,
+      shape: BoxShape.circle,
+      ),
+      child: const CircularProgressIndicator(color: AppTheme.primary),);
   }
 }
